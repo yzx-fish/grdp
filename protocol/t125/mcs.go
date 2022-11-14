@@ -393,7 +393,7 @@ func (c *MCSClient) recvAttachUserConfirm(s []byte) {
 func (c *MCSClient) connectChannels() {
 	glog.Debug("mcs connectChannels:", c.channelsConnected, ":", len(c.channels))
 	if c.channelsConnected == len(c.channels) {
-		if c.nbChannelRequested < int(c.serverNetworkData.ChannelCount) {
+		if c.serverNetworkData !=nil && c.nbChannelRequested < int(c.serverNetworkData.ChannelCount) {
 			//static virtual channel
 			chanId := c.serverNetworkData.ChannelIdArray[c.nbChannelRequested]
 			c.nbChannelRequested++
@@ -509,7 +509,7 @@ func (c *MCSClient) recvChannelJoinConfirm(s []byte) {
 		return
 	}
 	glog.Debug("Confirm channelId:", channelId)
-	if confirm == 0 {
+	if confirm == 0 && c.serverNetworkData!=nil {
 		for i := 0; i < int(c.serverNetworkData.ChannelCount); i++ {
 			if channelId == c.serverNetworkData.ChannelIdArray[i] {
 				var t MCSChannelInfo

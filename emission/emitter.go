@@ -199,7 +199,14 @@ func (emitter *Emitter) callListeners(listeners []reflect.Value, event interface
 
 	for _, fn := range listeners {
 		go func(fn reflect.Value) {
-			defer wg.Done()
+			//defer wg.Done()
+			defer func() {
+				if err := recover(); err != nil {
+					return
+				}
+				wg.Done()
+			}()
+
 
 			// Recover from potential panics, supplying them to a
 			// RecoveryListener if one has been set, else allowing
