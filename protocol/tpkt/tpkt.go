@@ -5,10 +5,10 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/tomatome/grdp/core"
-	"github.com/tomatome/grdp/emission"
-	"github.com/tomatome/grdp/glog"
-	"github.com/tomatome/grdp/protocol/nla"
+	"github.com/yzx-fish/grdp/core"
+	"github.com/yzx-fish/grdp/emission"
+	"github.com/yzx-fish/grdp/glog"
+	"github.com/yzx-fish/grdp/protocol/nla"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp

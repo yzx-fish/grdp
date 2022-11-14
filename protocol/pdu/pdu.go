@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/hex"
 
-	"github.com/tomatome/grdp/core"
-	"github.com/tomatome/grdp/emission"
-	"github.com/tomatome/grdp/glog"
-	"github.com/tomatome/grdp/protocol/t125/gcc"
+	"github.com/yzx-fish/grdp/core"
+	"github.com/yzx-fish/grdp/emission"
+	"github.com/yzx-fish/grdp/glog"
+	"github.com/yzx-fish/grdp/protocol/t125/gcc"
 )
 
 type PDULayer struct {

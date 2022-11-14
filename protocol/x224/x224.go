@@ -6,12 +6,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tomatome/grdp/glog"
+	"github.com/yzx-fish/grdp/glog"
 
 	"github.com/lunixbochs/struc"
-	"github.com/tomatome/grdp/core"
-	"github.com/tomatome/grdp/emission"
-	"github.com/tomatome/grdp/protocol/tpkt"
+	"github.com/yzx-fish/grdp/core"
+	"github.com/yzx-fish/grdp/emission"
+	"github.com/yzx-fish/grdp/protocol/tpkt"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp

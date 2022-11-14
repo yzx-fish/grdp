@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/lunixbochs/struc"
-	"github.com/tomatome/grdp/core"
-	"github.com/tomatome/grdp/glog"
+	"github.com/yzx-fish/grdp/core"
+	"github.com/yzx-fish/grdp/glog"
 )
 
 const (
